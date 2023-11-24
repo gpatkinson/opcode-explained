@@ -9,8 +9,9 @@ export default defineConfig({
     },
 
     nav: [
+      { text: "Intro", link: "/script/", activeMatch: "/script/" },
       { text: "Opcodes", link: "/opcodes/", activeMatch: "/opcodes/" },
-      { text: "Script", link: "/script/", activeMatch: "/script/" }
+      
     ],
 
     sidebar: {
@@ -290,14 +291,18 @@ export default defineConfig({
       ],
       
       "/script/": [
-        {
-          text: 'Introduction',
-          items: [
-            { text: "Script Basics", link: "/script/the_basics.md"},
-            { text: "The Stack", link: "/script/the_stack.md"},
-            { text: "Transaction Validation", link: "/script/tx_validation.md"},
-          ]
-        },
+     //  COMMENT: OPTIONAL 'SECTIONING' FORMAT OF INTRODUCTORY PAGES
+     //   {
+     //     text: 'Introduction',
+     //     items: [
+     //       { text: "Script Basics", link: "/script/the_basics.md"},
+     //       { text: "The Stack", link: "/script/the_stack.md"},
+     //       { text: "Transaction Validation", link: "/script/tx_validation.md"},
+     //     ]
+     //   },
+        { text: "Script Basics", link: "/script/script_basics.md"},
+        { text: "The Stack", link: "/script/the_stack.md"},
+        { text: "Transaction Validation", link: "/script/tx_validation.md"},
         { text: "Script Success and Failure", link: "/script/script.md" },
         { text: "ASM Representation", link: "/script/asm.md" },
         { text: "Numbers in Script", link: "/script/numbers.md" },

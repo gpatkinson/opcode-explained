@@ -1,8 +1,14 @@
 # Transaction Validation
 
-The Bitcoin validation engine relies on two general types of scripts to validate transactions.
-1. **locking script** (aka witness script)- this is the spending condition placed on an output, a condition that must be met to spend a given UTXO in the future.
-2. **unlocking script** - script that satisfies the conditions made by the locking script.
+Bitcoin validation relies on two general types of scripts:
+1. **locking script** - the criteria that must be met in order to spend a UTXO
+2. **unlocking script** - the script that satisfies the locking script, typically a cryptographic signagure
+    
+These script types are used together in transaction validation:
 
-To validate a transaction, nodes execute the locking and unlocking scripts together. First the unlocking script is executed and if executed without errors, the main stack is copied and locking script is then executed. If the end result of these operations is "TRUE", the unlocking script has satisfied the necessary conditions and the UTXO can be spent.
+>Every bitcoin validating node will validate transactions by executing the locking and unlocking scripts together. Each input contains an unlocking script and refers to a previously existing UTXO. The validation software will copy the unlocking script, retrieve the UTXO referenced by the input, and copy the locking script from that UTXO. The unlocking and locking script are then executed in sequence. The input is valid if the unlocking script satisfies the locking script conditions ... All the inputs are validated independently, as part of the overall validation of the transaction.
+
+## References
+
+1. Antonopoulos, Andreas M. [_Mastering Bitcoin: Programming the Open Blockchain_](https://github.com/bitcoinbook/bitcoinbook). 2nd Ed, O'Reilly, 2017.
    
