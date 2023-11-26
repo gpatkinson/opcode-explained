@@ -14,12 +14,13 @@ hero:
   #     link: /overview/
 
 features:
-  - title: Introduction
-    details: The basics of the bitcoin scripting language.
-    link: /script/
   - title: Opcodes
     details: An encyclopedia of all current opcodes.
     link: /opcodes/
+  - title: Script
+    details: The basics of the bitcoin scripting language.
+    link: /script/
+
 
 
 

@@ -9,9 +9,8 @@ export default defineConfig({
     },
 
     nav: [
-      { text: "Intro", link: "/script/", activeMatch: "/script/" },
       { text: "Opcodes", link: "/opcodes/", activeMatch: "/opcodes/" },
-      
+      { text: "Script", link: "/script/", activeMatch: "/script/" }
     ],
 
     sidebar: {
@@ -291,15 +290,6 @@ export default defineConfig({
       ],
       
       "/script/": [
-     //  COMMENT: OPTIONAL 'SECTIONING' FORMAT OF INTRODUCTORY PAGES
-     //   {
-     //     text: 'Introduction',
-     //     items: [
-     //       { text: "Script Basics", link: "/script/the_basics.md"},
-     //       { text: "The Stack", link: "/script/the_stack.md"},
-     //       { text: "Transaction Validation", link: "/script/tx_validation.md"},
-     //     ]
-     //   },
         { text: "Script Basics", link: "/script/script_basics.md"},
         { text: "The Stack", link: "/script/the_stack.md"},
         { text: "Transaction Validation", link: "/script/tx_validation.md"},
